@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="extras/table-excel-xsl-converter/jquery.tableToExcel.js"></script>
+    <title>Plugin</title>
+</head>
+<body>
+    <div class="content flex">
+        <header>
+            <div class="container">
+                <h1 id="title">Historial de ventas de consolas</h1>
+            </div>
+        </header>
+        <main>
+            <div class="form" method="post">
+                <form id="console-form" class="flex"> 
+                    <div class="block field">
+                        <label for="console-manufacturer">Fabricante de consola</label>
+                        <input type="text" name="console-manufacturer" id="console-manufacturer" placeholder="Sony, Nintendo, Microsoft..." required>
+                    </div>
+                    <div class="block field">
+                        <label for="console-name">Nombre de consola</label>
+                        <input type="text" name="console-name" id="console-name" placeholder="Play Station, Switch, Xbox..." required>
+                    </div>
+                    <div class="block field">
+                        <label for="console-name">Ventas totales</label>
+                        <input type="number" name="console-sales" id="console-sales" placeholder="100" required>
+                    </div>
+                    <div class="block field">
+                        <button id="btn-insert">Agregar registro</button>
+                    </div>
+                </form>
+            </div>
+            <div class="table">
+                <table id="statistics">
+                    <tr>
+                        <th>Fabricante</th>
+                        <th>Modelo</th>
+                        <th>Ventas</th>
+                    </tr>
+                </table>
+            </div>
+        </main>
+        </div>
+        <div id="btn-convert-container"></div>
+    <script src="js/app.js"></script>
+</body>
+</html>
