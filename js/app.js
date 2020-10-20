@@ -17,7 +17,6 @@ $(document).ready(function () {
                                 <td>${sales}</td>`
             $('#statistics').append(newRecord);
             $('#console-form')[0].reset();
-            alert($('tbody').children().length);
             if($('tbody').children().length == 2) {
                 let converter = document.createElement('button');
                 converter.setAttribute('id','btn-convert');
